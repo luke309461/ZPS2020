@@ -72,7 +72,7 @@ Generowanie klucza (typowe opcje):
 $ ssh-keygen -t rsa -b 4096 -C "Jan.Kowalski@mail.com" 
 ```
 Po tej instrukcji w podkatalogu (w katalogu domowym) `.ssh` powinny znaleźć się 2 pliki: `id_rsa` (klucz prywatny) oraz `id_rsa.pub` (klucz publiczny). 
-Teraz należy na swoim koncie na GitHub dodać ten klucz:
+Teraz należy na swoim koncie na GitHub dodać  klucz publiczny:
 `Settings -> SSH and GPG keys -> SSH keys -> New SSH key`
 
 Od tej pory powinniśmy móc pisać do repozytorium bez podawania hasła.
