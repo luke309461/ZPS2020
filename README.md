@@ -57,7 +57,25 @@ $ git commit -m 'Zauktalizowany plik users.txt i dodany users_test/nazwa_uzytkow
 $ git push
 ```
 
-Powinien on wowczas spytac o login i haslo uzytkownika, moze/powinien je tez zapamietac, zatem pozniejsza praca nie wymaga zbyt czestego podawania nazwy uzytkownika i hasla.
+Powinien on wowczas spytac o login i haslo uzytkownika.
+
+Najważniejsze operacje: a) dodawanie pliku (jak wyżej); b) ściąganie najnowszej wersji repozytorium: `git pull`
+
+
+
+*  **Używanie kluczy SSH**
+
+Ten punkt nie jest obowiązkowy, ale ułatwia pracę. Jeśli wykonałeś tylko powyższe kroki, przy każdym `git push` niezbędne będzie podawanie hasła. Wygodniejsza jest autoryzacja za pomocą kluczy ssh. Poniższe dotyczy systemu Linux. 
+
+Generowanie klucza (typowe opcje):
+```
+$ ssh-keygen -t rsa -b 4096 -C "Jan.Kowalski@mail.com" 
+```
+Po tej instrukcji w podkatalogu (w katalogu domowym) `.ssh` powinny znaleźć się 2 pliki: `id_rsa` (klucz prywatny) oraz `id_rsa.pub` (klucz publiczny). 
+Teraz należy na swoim koncie na GitHub dodać ten klucz:
+`Settings -> SSH and GPG keys -> SSH keys -> New SSH key`
+
+Od tej pory powinniśmy móc pisać do repozytorium bez podawania hasła.
 
 
 
