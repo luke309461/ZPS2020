@@ -65,7 +65,7 @@ ax_train = fig_train.add_subplot(111, projection='3d')
 
 ax_train.set_title(input_dir +" - TRAIN")	
 
-for cl in range(0,int(y_train.max())+1):
+for cl in np.unique(y_train):
     points = x_train[y_train==cl];
     ax_train.scatter(points[:,0], points[:,1], points[:,2], label=classes_names[cl])
     
@@ -78,7 +78,7 @@ ax_test = fig_test.add_subplot(111, projection='3d')
 
 ax_test.set_title(input_dir +" - TEST")	
 
-for cl in range(0,int(y_test.max())+1):
+for cl in  np.unique(y_test):
     points = x_test[y_test==cl];
     ax_test.scatter(points[:,0], points[:,1], points[:,2], label=classes_names[cl])
     

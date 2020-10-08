@@ -134,21 +134,5 @@ x_test , y_test  = read_images(input_dir + "/test/", classes_names, img_height, 
 save_data(x_train , y_train, x_test , y_test, classes_names, output_dir)
     
      
-quit()    
-
-# BoW
-vectorizer = CountVectorizer()
-X_train = vectorizer.fit_transform(X_train_data)
-
-# classifier
-clf = MultinomialNB(alpha=.01)
-clf.fit(X_train, Y_train)
-
-# read in test data
-X_test_data, Y_test = read_data(data_dir + "/test/", classes_names)
-X_test = vectorizer.transform(X_test_data)
-
-Y_pred = clf.predict(X_test)
-
-print("Accuracy: ", metrics.accuracy_score(Y_test, Y_pred))
-
+  
+ 

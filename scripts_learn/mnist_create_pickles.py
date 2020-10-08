@@ -43,12 +43,11 @@ data = literki.data
 data_classes = literki.target 
 classes_names = literki.target_names
 
+
 # dzielimy zbior na treningowy i testowy
 
 data_train, data_test, classes_train, classes_test = train_test_split(data, data_classes,
             test_size=0.2, random_state=42)
-
-
 
 
 

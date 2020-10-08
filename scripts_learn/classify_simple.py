@@ -71,9 +71,19 @@ k_nr_neighbours=int(k_nr_neighbours)
 
 x_train,y_train, x_test,y_test,classes_names = read_data(input_dir)
 
+
+# wyswietlmy ile punktow jakiej klasy jest 
+print("\n")
+print("General info on train and test set:")
+print("x_train, nr of points: ", x_train.shape[0],", dimension = ", x_train.shape[1])
+print("x_test, nr of points: ", x_test.shape[0],", dimension = ", x_test.shape[1])
+
+for i in np.unique(y_train):
+    print("class ", i , ", train set size: ", len(y_train[y_train==i]), ", test set size: ", len(y_test[y_test==i]))
     
 
 
+print("\n")
 ### KLASYFIKACJA
 
 ## knn 
@@ -95,7 +105,7 @@ print("  took %s seconds " % round((time.time() - start_time),5))
 metric_accuracy = metrics.accuracy_score(y_test,y_pred)
 print("knn: accuracy = ", metric_accuracy)
 
-
+ 
 # dla binarnych:
 # metric_f1 = metrics.f1_score(y_test,y_pred)
 # metric_precision = metrics.precision_score(y_test,y_pred)

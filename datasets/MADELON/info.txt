@@ -1,0 +1,5 @@
+
+http://clopinet.com/isabelle/Projects/NIPS2003/
+
+tutaj byl udostepniony zbior treningowy i walidacyjny, nie bylo testowego (byl, ale bez klas),
+dlatego walidacyjny potraktujemy jak testowy
