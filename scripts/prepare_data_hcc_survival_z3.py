@@ -1,4 +1,25 @@
  
+from sklearn.model_selection import train_test_split
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn.manifold import TSNE
+from sklearn import decomposition
+ 
+from sklearn import datasets, metrics 
+from sklearn.manifold import TSNE
+from sklearn.metrics import classification_report
+ 
+import time
+import argparse
+
+from sklearn.model_selection import train_test_split
+import pickle 
+
+from sklearn.naive_bayes import GaussianNB
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
 
 
 def save_data(x_train , y_train, x_test , y_test, classes_names, output_dir):
@@ -57,7 +78,7 @@ data = data_all[:,:49] # = wszystkie wiersze, kolumny do 49.
 
 # ostatnia kolumna to klasy:
 
-data_classes = data_all[:,50] # = wszystkie wiersze, kolumna 50
+data_classes = data_all[:,49] # = wszystkie wiersze, kolumna 50
 
 # nazwy klas -- damy tutaj wszystkie unikalne numery, ktore wystepuja w data_classes
 # (mozna np. reczni wpisac classes_names = ['divorced', 'not divorced']
