@@ -1,0 +1,4 @@
+$ git add users.txt
+$ git add users_test/luke309461.txt
+$ git commit -m 'Zauktalizowany plik users.txt i dodany users_test/luke309461.txt'
+$ git push
